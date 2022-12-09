@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="example">
+      <p class="first">this is para-1</p>
+      <p id="para1">this is para-2</p>
+      <p id="last">this is para-3<p>asdasd</p></p>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    var ele = $("#example");
+
+    // alert("parent: " + ele.find("p").text());//all the way down to the last descendent
+    alert("parent: " + ele.find("#last").text());
+  });
+</script>

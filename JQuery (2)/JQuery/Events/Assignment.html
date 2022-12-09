@@ -1,0 +1,40 @@
+<div class="big" id="div1">
+  <p>This is first division of the DOM.</p>
+</div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="div2">
+      <p>This is second division of the DOM.</p>
+    </div>
+
+    <div id="div3">
+      <p>This is third division of the DOM</p>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  $(document).ready(function () 
+  
+  {
+    $("div").each(function (index, element) 
+    {
+        
+      $(element)
+        .children()
+        .each(function (index, child)
+         {
+                 $(child).click(function(){
+                    alert($(this).text());
+                 });
+        });
+    });
+  });
+</script>

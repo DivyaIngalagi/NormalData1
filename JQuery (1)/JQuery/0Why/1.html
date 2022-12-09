@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Manually changing Dom content.</h1>
+    <div id="div1">replace content</div>
+    <div id="div2">replace content</div>
+    <div id="div3">replace content</div>
+  </body>
+</html>
+
+<script>
+  var divs = document.getElementsByTagName("div");
+
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].innerText = "manually";
+  }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <input type="text" id="txtFirstName" value="mahesh" />
+
+    <br />
+
+    <div id="divTemp" title="testing">div testing.</div>
+
+    <input type="radio" name="gender" value="Male" />Male
+    <input type="radio" name="gender" checked="checked" value="Female" />Female
+
+    <br />
+    <input type="checkbox" id="chkSports" name="sport" />Cricket
+  </body>
+</html>
+
+<script>
+  $(function () {
+    let pValue = $("#txtFirstName");
+
+    pValue.val();
+
+    let genderSelection = $("input[name='gender']:checked").val();
+
+    let chkSport = $("#chkSports");
+
+    chkSport.attr("checked", true);
+
+    let divPara = $("#divTemp");
+
+    //alert(divPara.attr("title", "changed by jquery."));
+  });
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p>Loading data => using Get Method.</p>
+
+    <button>make ajax call.</button>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      $.get(
+        "https://jsonplaceholder.typicode.com/users/1",
+        null,
+        onSuccess,
+        "json"
+      );
+    });
+  });
+
+  function onSuccess(responseData, textStatus, xmlhttpRequest) {
+    alert("in success");
+
+    if (textStatus === "success") {
+      $("p").text(JSON.stringify(responseData));
+    }
+
+    if (textStatus === "error") {
+      alert(xmlhttpRequest.status + xmlhttpRequest.statusText);
+    }
+  }
+</script>

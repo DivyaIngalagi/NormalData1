@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <p class="first">this is para-1</p>
+    </div>
+
+    <div>
+      <p class="two">this is para-2</p>
+    </div>
+
+    <div>
+      <p class="third">this is para-3</p>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    var ele = $("div");
+
+    alert(ele.last().text());
+
+    alert(ele.first().text());
+  });
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p>Hello</p>
+
+    <button id="btnAdd" type="button">Add Last.</button>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    $("#btnAdd").click(function () {
+      $("p").remove();
+    });
+  });
+</script>

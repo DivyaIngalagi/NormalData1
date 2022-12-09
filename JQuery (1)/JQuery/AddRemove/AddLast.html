@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p id="firstPara">Hello jquery</p>
+    <button id="btnAdd" type="button">Add Last.</button>
+  </body>
+</html>
+
+<script>
+    $(function () {
+    $("#btnAdd").click(function () {
+      $("p").prepend("<p>append by jquery.</p>");
+  });
+    });
+</script>

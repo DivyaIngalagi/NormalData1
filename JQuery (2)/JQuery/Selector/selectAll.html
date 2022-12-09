@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p id="firstPara">Hello jquery</p>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    let pValue = $("#firstPara");
+
+    alert(pValue.text());
+  });
+</script>

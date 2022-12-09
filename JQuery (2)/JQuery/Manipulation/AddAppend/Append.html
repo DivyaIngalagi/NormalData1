@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <script src="../../jquery.min.js"></script>
+    </head>
+  </head>
+
+  <body>
+    <button id="btnAppend">Append Item.</button>
+    <ol>
+      <li>C++</li>
+      <li>Java</li>
+      <li>C#</li>
+    </ol>
+  </body>
+
+  <script>
+    jQuery(document).ready(function () {
+      $("#btnAppend").on("click", function () {
+        // $("ol").append("<li>Kotlin</li>");
+
+        $("<li>Python</li>").appendTo("ol");
+      });
+    });
+  </script>
+</html>

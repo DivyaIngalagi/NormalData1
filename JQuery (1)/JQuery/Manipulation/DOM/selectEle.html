@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>change demo</title>
+    <script src="../../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <select id="ddlViewBy" onchange="ddlChange()">
+      <option value="1">test</option>
+      <option value="2">test</option>
+      <option value="3">test1</option>
+    </select>
+  </body>
+</html>
+
+<script>
+  jQuery(document).ready(function () {
+    var ddlObj = $("#ddlViewBy");
+
+    alert(ddlObj.val());
+    alert(ddlObj.text());
+  });
+</script>

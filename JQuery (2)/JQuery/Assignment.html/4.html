@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image.png" id="img" alt="Image Not Available" height="20%" width="20%" />
+</body>
+</html>
+<script>
+    
+    document.getElementById('img').addEventListener('click',myClickEvent);
+    
+    
+    
+    function myClickEvent(){
+              alert("hello image changed");
+            var t= document.getElementById('img');
+            if(t.hasAttribute('src')){
+                t.value="image2.jfif"
+                t.setAttribute('src','./image2.jfif');
+            }
+    }
+    </script>

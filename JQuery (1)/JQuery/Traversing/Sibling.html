@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <p class="first">this is para-1</p>
+
+      <span>this is span</span>
+
+      <h2>I am header.</h2>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    var allSibling = $("span").siblings();
+
+    alert(allSibling.text("all are sibling"));
+  });
+</script>

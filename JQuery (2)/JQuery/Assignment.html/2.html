@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Document</title>
+    <script src="/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>My name is Divya</h2>
+        <p>I live in Karnataka</p>
+    </div>
+    <div>
+        <span><p>I will not styled</p></span>
+    </div>
+    <p>My bestfriend is mike</p>
+</body>
+</html>
+<script>
+
+$(document).ready(function () 
+  
+  {
+    $( "div p:only-child" ).css("font-size","18pt");
+  //   $("div").each(function (index, element) 
+  //   {
+      
+  //    $(element)
+  //       .children()
+  //       .each(function (index, child)
+  //        {
+  //               //  if(child.tagName=='P'){
+                    
+                    // $(child).css("font-size","18pt");
+  //               //  }
+  //   });
+  // });
+  });
+</script>

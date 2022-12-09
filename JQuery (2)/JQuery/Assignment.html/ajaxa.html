@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="btn" type="button">Get AJAX Intro Document</button>
+</body>
+</html>
+<script>
+
+// https://www.w3schools.com/xml/ajax
+$(document).ready(function () {
+    $("button").click(function () {
+      $.ajax({
+        url: "https://www.w3schools.com/xml/ajax",
+        type: "get",
+        dataType: "json",
+        success: function (response) {
+          $("div").text(JSON.stringify(response));
+        },
+        complete: function () {
+          alert("request has been completed.");
+        },
+        error: onFailed,
+      });
+    });
+  });
+
+  function onFailed(xMLHttpRequest) {
+    console.log(xMLHttpRequest.status + ":" + xMLHttpRequest.statusText);
+  }
+
+</script>

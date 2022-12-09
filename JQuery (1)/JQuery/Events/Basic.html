@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <input type="text" id="txtFirstName" value="" onfocus="firstNameFouc()" /> -->
+
+    <input type="text" id="txtFirstName" value="" />
+  </body>
+</html>
+
+<script>
+  function firstNameFouc() {}
+
+  $(document).ready(function () {
+    $("#txtFirstName").focus(function () {
+      $(this).val("throug jquery.");
+    });
+  });
+</script>

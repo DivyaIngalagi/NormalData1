@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <ol>
+      <li>list item -1</li>
+      <li>list item -1</li>
+      <li>list item -1</li>
+    </ol>
+
+    <button id="btnAdd" type="button">Add Last.</button>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    $("#btnAdd").click(function () {
+      $("ol").append("<li>append by jquery.</li>");
+    });
+  });
+</script>

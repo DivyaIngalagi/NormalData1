@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>change demo</title>
+    <script src="../../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <select id="ddlViewBy" onchange="">
+      <option>India</option>
+      <option selected="true">Canda</option>
+      <option>UK</option>
+    </select>
+  </body>
+</html>
+
+<script>
+  jQuery(document).ready(function () {
+    $("#ddlViewBy").on("change", function () {
+      alert($(this).val());
+    });
+
+    // $("#ddlViewBy")
+    //   .find("option")
+    //   .each(function (index, ele) {
+    //     console.log(ele.hasAttribute("selected"));
+    //   });
+  });
+</script>

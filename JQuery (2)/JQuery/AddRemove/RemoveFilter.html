@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+        <p id="para-1"></p>
+        <p id="para-2"></p>
+    </div>
+
+    <button id="btnAdd" type="button">Add Last.</button>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    $("#btnAdd").click(function () {
+      $("div").remove(".para-2");
+    });
+  });
+</script>

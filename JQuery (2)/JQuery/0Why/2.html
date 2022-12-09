@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>change demo</title>
+  </head>
+
+  <body>
+    <select id="ddlViewBy" onchange="ddlChange()">
+      <option>test1</option>
+      <option>test2</option>
+      <option>test3</option>
+    </select>
+  </body>
+</html>
+
+<script>
+  function ddlChange() {
+    var ddlObj = document.getElementById("ddlViewBy");
+
+    var indexSelected = ddlObj.selectedIndex;
+
+    console.log(ddlObj.options[indexSelected].value);
+  }
+</script>

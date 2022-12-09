@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery.min.js"></script>
+    <style>
+
+        .big{
+            color: darkred;
+            font-weight:bolder;
+        }
+        .small{
+            color: darkblue;
+            font-weight:bolder;
+        }
+        div{
+            font-size: 16pt;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="div1" class="big">
+        <p>This is first Division of Dom</p>
+    </div>
+    <div id="div2" class="medium">
+        <p>This is second Division of Dom</p>
+    </div>
+    <div id="div3" class="small">
+        <p>This is third Division of Dom</p>
+    </div>
+    <div id="div4" class="big">
+        <p>This is fourth Division of Dom</p>
+    </div>
+    <div id="div5" class="medium">
+        <p>This is fifth Division of Dom</p>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+let l=document.getElementsByTagName('div');
+for(var i=0;i<l.length;i++){
+            // for(var j=0;j<=l[i].children.length;j++){
+                // l[i].addEventListener('click',myClickEvent);
+                // alert(l[i].children.length);
+               
+                var childe=l[i].children;
+                
+                for(var j=0;j<childe.length;j++){
+                    childe[j].addEventListener('click',myClickEvent);
+            }
+}
+// document.getElementsByTagName('div').addEventListener('click',myClickEvent);
+// document.getElementById('div').addEventListener('click',myClickEvent);
+
+            function myClickEvent(e)
+        {
+            
+            alert(e.target.innerText);
+        
+            
+        }
+
+    // $(document).ready(function () 
+    
+    // {
+    //   $("div").each(function (index, element) 
+    //   {
+          
+    //     $(element)
+    //       .children()
+    //       .each(function (index, child)
+    //        {
+    //                $(child).click(function(){
+    //                   alert($(this).text());
+    //                });
+    //       });
+    //   });
+    // });
+  </script>
+  

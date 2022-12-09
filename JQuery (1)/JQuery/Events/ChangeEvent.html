@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>change demo</title>
+    <script src="../../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <select id="ddlViewBy">
+      <option value="1" >test</option>
+      <option value="2">test</option>
+      <option value="3" >test1</option>
+    </select>
+  </body>
+</html>
+
+<script>
+  jQuery(document).ready(function () 
+  {
+    // alert($("#ddlViewBy").val());
+    // alert($("#ddlViewBy").text());
+    $("#ddlViewBy").on("change",function () 
+    
+    {
+      alert($(this).text());
+      // alert($("#ddlViewBy option:selected").text());
+      // alert($(this).text());
+    });
+    
+    // $("#ddlViewBy option").each(function (index,ele) 
+    
+    // {
+    //   alert($(this).text());
+    // });
+    // $("#ddlViewBy").each(function (index,ele) 
+    
+    // {
+    //   alert($(this).text());
+    // });
+  });
+</script>

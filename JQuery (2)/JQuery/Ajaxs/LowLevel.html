@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p>Loading data...using ajax() method.</p>
+
+    <button>make ajax call.</button>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      $.ajax({
+        url: "https://jsonplaceholder.typicode.com/users/11",
+        type: "get",
+        dataType: "json",
+        success: function (response) {
+          $("p").text(JSON.stringify(response));
+        },
+        complete: function () {
+          alert("request has been completed.");
+        },
+        error: onFailed,
+      });
+    });
+  });
+
+  function onFailed(xMLHttpRequest) {
+    console.log(xMLHttpRequest.status + ":" + xMLHttpRequest.statusText);
+  }
+</script>

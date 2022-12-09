@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p id="firstPara">Hello jquery</p>
+
+
+    <span>span-1</span>
+
+    <div>div-1</div>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    let all = $("div,span,p");
+
+    alert(all.text('super easy.'));
+  });
+</script>

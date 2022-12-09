@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      console.log("before timeout");
+
+      window.setTimeout(callMeBack, 3000);
+
+      window.setInterval(callMe, 3000);
+
+      console.log("init setTimeout function.");
+
+      function callMeBack() {
+        console.log("event elapsed.");
+      }
+
+      function callMe() {
+        console.log("time elapsed.");
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>Hello jquery</p>
+
+    <script></script>
+  </body>
+</html>
